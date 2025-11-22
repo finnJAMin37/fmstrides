@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #ffffff;
+  --color-foreground: #026b02;
+  --color-accent: #e1ffe1;
+  --color-link: #00704a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #0d1f14;
+    --color-foreground: #ededed;
+    --color-accent: #1a3a28;
+    --color-link: #6bffbc;
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+[data-nextjs-scroll-focus-boundary] > div[style*="position: fixed"] svg[data-next-mark-loading],
+svg[data-next-mark-loading] {
+  display: none !important;
+}
+
+[data-nextjs-scroll-focus-boundary] > div[style*="position: fixed"] {
+  display: none !important;
+}
